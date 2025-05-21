@@ -7,8 +7,8 @@ class VagonCarga extends Vagon {
 
     public function __construct($anioInstalacion, $largo, $ancho, $pesoVacio, $pesoMaxCarga, $pesoCargaActual = 0) {
         parent::__construct($anioInstalacion, $largo, $ancho, $pesoVacio);
-        $this->setPesoMaxCarga($pesoMaxCarga);
-        $this->setPesoCargaActual($pesoCargaActual);
+        $this->pesoMaxCarga = $pesoMaxCarga;
+        $this->pesoCargaActual = $pesoCargaActual;
     }
 
 
@@ -22,11 +22,12 @@ class VagonCarga extends Vagon {
 
     
     public function incorporarCargaVagon($cantidadCarga) {
+        $bandera = false;
         if (($this->getPesoCargaActual() + $cantidadCarga) <= $this->getPesoMaxCarga()) {
             $this->setPesoCargaActual($this->getPesoCargaActual() + $cantidadCarga);
-            return true;
+            $bandera = true;
         }
-        return false;
+        return $bandera;
     }
 
     public function calcularPesoVagon() {
