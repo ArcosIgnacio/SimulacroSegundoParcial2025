@@ -5,8 +5,8 @@ class Locomotora {
     private $velocidadMaxima; // en km/h
 
     public function __construct($peso, $velocidadMaxima) {
-        $this->setPeso($peso);
-        $this->setVelocidadMaxima($velocidadMaxima);
+        $this->peso = $peso;
+        $this->velocidadMaxima = $velocidadMaxima;
     }
 
     // Getters y Setters
