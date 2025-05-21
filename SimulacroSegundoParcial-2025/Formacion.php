@@ -6,8 +6,8 @@ class Formacion {
     private $maxVagones;
 
     public function __construct($locomotora, $maxVagones) {
-        $this->setLocomotora($locomotora);
-        $this->setMaxVagones($maxVagones);
+        $this->locomotora = $locomotora;
+        $this->maxVagones = $maxVagones;
     }
 
     public function incorporarVagonFormacion($vagon) {
