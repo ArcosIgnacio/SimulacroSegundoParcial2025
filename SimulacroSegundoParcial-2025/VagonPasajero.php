@@ -7,8 +7,8 @@ class VagonPasajero extends Vagon {
 
     public function __construct($anioInstalacion, $largo, $ancho, $pesoVacio, $maxPasajeros, $pasajerosActuales = 0) {
         parent::__construct($anioInstalacion, $largo, $ancho, $pesoVacio);
-        $this->setMaxPasajeros($maxPasajeros);
-        $this->setPasajerosActuales($pasajerosActuales);
+        $this->maxPasajeros = $maxPasajeros;
+        $this->pasajerosActuales = $pasajerosActuales;
     }
 
     // Getters y Setters específicos
